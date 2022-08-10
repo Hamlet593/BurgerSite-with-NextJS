@@ -1,10 +1,17 @@
+import Head from "next/head";
+
 const Cheeseburger = () => {
     return (
-        <div>
-            <h1>
-                Cheeseburger
-            </h1>
-        </div>
+        <>
+            <Head>
+                <title>Cheeseburger</title>
+            </Head>
+            <div>
+                <h1>
+                    Cheeseburger
+                </h1>
+            </div>
+        </>
     )
 }
 
