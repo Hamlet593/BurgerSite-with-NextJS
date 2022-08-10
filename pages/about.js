@@ -1,10 +1,10 @@
 const about = () => {
     return (
         <>
-            <h1>О нас</h1>
-            <p>Жирные бургеры - это старые добрые бургеры по классической рецептуре, нужных размеров и за приемлемую цену.</p>
-            <p>Готовят их на американский, мексиканский и итальянский манер, не жалея ни соуса, ни начинки.</p>
-            <p>Для тех, кто изрядно проголодался, есть необъятный «Самый жирный бургер» с пятью говяжьими котлетами, кукурузными чипсами и сыром.</p>
+            <h1>About us</h1>
+            <p>Fat burgers are good old burgers with a classic recipe, the right size and at a reasonable price..</p>
+            <p>They are prepared in the American, Mexican and Italian manners, sparing neither sauce nor toppings.</p>
+            <p>For those who are pretty hungry, there is an immense "Fattest Burger" with five beef patties, corn chips and cheese.</p>
         </>
     )
 }
