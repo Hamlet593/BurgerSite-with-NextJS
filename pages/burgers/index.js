@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 const Burgers = () => {
     return (
@@ -12,6 +13,7 @@ const Burgers = () => {
                 <h1>
                     Our Burgers
                 </h1>
+                <Link href='/burgers/cheeseburger'><a><button>Here is Cheeseburger</button></a></Link>
             </div>
         </>
     )
