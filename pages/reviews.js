@@ -1,15 +1,6 @@
 import Head from 'next/head';
 
-// export default function Hamo (props) {
-//     console.log(props);
-//     return (
-//         <div>69</div>
-//     )
-// }
-// Hamo();
-
 export default function Reviews ({reviews}) {
-    console.log(reviews)
     return (
         <>
             <Head>
@@ -17,7 +8,7 @@ export default function Reviews ({reviews}) {
             </Head>
             <h1>Our reviews</h1>
             <div className='reviews'>
-                {!!reviews && reviews.map(({id, body}) => {
+                {reviews.map(({id, body}) => {
                     return (
                         <div key={id} className='review'>
                             {id} {body.slice(0, 40)}
