@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
+import ImageConverter from '../helpers/ImageConverter';
 
-const Burgers = () => {
+const Burgers = ({ burgers }) => {
     return (
         <>
             <Head>
@@ -13,10 +13,34 @@ const Burgers = () => {
                 <h1>
                     Our Burgers
                 </h1>
-                <Link href='/burgers/cheeseburger'><a><button>Here is Cheeseburger</button></a></Link>
+                {burgers.map(({ name, desc, image, price, id }) => {
+                    return (
+                        <div key={id}>
+                            <h3>{name}</h3>
+                            <p>{desc}</p>
+                            <p>Price is: {price}$</p>
+                            <ImageConverter
+                                src={image}
+                                alge={name}
+                                width={300}
+                                height={300}
+                            />
+                        </div>
+                    )
+                })}
             </div>
         </>
     )
+}
+
+export const getStaticProps = async () => {
+    const res = await fetch('http://localhost:5000/items');
+    const data = await res.json();
+    return {
+        props: {
+            burgers: data
+        }
+    }
 }
 
 export default Burgers;

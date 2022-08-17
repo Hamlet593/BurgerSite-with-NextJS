@@ -1,0 +1,26 @@
+{
+    "items": [
+      {
+        "name": "Cheeseburger",
+        "image": "/images/cheese.jpg",
+        "desc":
+          "Classic 100% beef steak burger with pickled cucumbers and fresh wheat bun.",
+        "price": 5,
+        "id": "001"
+      },
+      {
+        "name": "Chicken Burger",
+        "image": "/images/chicken.jpg",
+        "desc": "Chicken burger topped with melted cheese, BBQ sauce and lettuce.",
+        "price": 7,
+        "id": "002"
+      },
+      {
+        "name": "Double Hamburger",
+        "image": "/images/double.jpg",
+        "desc": "Double hamburger with 100% beef steak and melted Cheddar cheese and spicy sauce.",
+        "price": 8,
+        "id": "003"
+      }
+    ]
+  }
