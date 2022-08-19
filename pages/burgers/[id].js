@@ -1,18 +1,18 @@
 import Head from "next/head";
 
-const Cheeseburger = () => {
+const Details = () => {
     return (
         <>
             <Head>
-                <title>Cheeseburger</title>
+                <title>Details for each burger</title>
             </Head>
             <div>
                 <h1>
-                    Cheeseburger
+                    Details
                 </h1>
             </div>
         </>
     )
 }
 
-export default Cheeseburger;
+export default Details;

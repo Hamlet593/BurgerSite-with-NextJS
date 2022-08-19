@@ -1,5 +1,7 @@
 import Head from "next/head";
-import ImageConverter from '../helpers/ImageConverter';
+import ImageConverter from '../../helpers/ImageConverter';
+import styles from '../../styles/Burgers.module.scss';
+import Link from "next/link";
 
 const Burgers = ({ burgers }) => {
     return (
@@ -15,17 +17,19 @@ const Burgers = ({ burgers }) => {
                 </h1>
                 {burgers.map(({ name, desc, image, price, id }) => {
                     return (
-                        <div key={id}>
-                            <h3>{name}</h3>
-                            <p>{desc}</p>
-                            <p>Price is: {price}$</p>
-                            <ImageConverter
-                                src={image}
-                                alge={name}
-                                width={300}
-                                height={300}
-                            />
-                        </div>
+                        <Link href={`/burgers/${id}`} key={id}>
+                            <a className={styles.burgerCard}>
+                                <ImageConverter
+                                    src={image}
+                                    alt={name}
+                                    width='100%'
+                                    height='100%'
+                                />
+                                <h3>{name}</h3>
+                                <p>{desc}</p>
+                                <p>Price is: {price}$</p>
+                            </a>
+                        </Link>
                     )
                 })}
             </div>

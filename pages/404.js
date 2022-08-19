@@ -9,7 +9,7 @@ const ErrorPage = () => {
     useEffect(() => {
         setTimeout(() => {
             router.push('/');
-        }, 5000)
+        }, 3000)
     }, [])
 
     return (
@@ -20,7 +20,7 @@ const ErrorPage = () => {
             <div className="not-found">
                 <h1>Oops...</h1>
                 <h2>We don't have that page.</h2>
-                <p>You will be redirect after 5 second...</p>
+                <p>You will be redirect after 3 second...</p>
             </div>
         </>
 
