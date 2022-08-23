@@ -36,7 +36,7 @@ const Details = ({ burger }) => {
           <Image 
             src={`${burger.image}`} 
             alt={`${burger.name}`} 
-            width="100%" 
+            width="100%"
             height="100%" 
           />
         </div>
