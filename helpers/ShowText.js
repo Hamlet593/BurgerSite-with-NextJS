@@ -16,7 +16,7 @@ const ShowText = ({ text, max = 80 }) => {
                     <div>{text} <Link href='f'><a onClick={evt => {
                         evt.preventDefault();
                         setMore(false)
-                    }}>less</a></Link></div>}
+                    }}> less</a></Link></div>}
         </>
     )
 }
