@@ -6,23 +6,26 @@
     }
 }
 
-.todoItem {
-    display: flex;
-    width: 600px;
-    margin: 0 auto;
-}
-
 .todoBlock {
-    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
     margin: 0 auto;
     border: 1px solid rgb(151, 151, 20);
     border-radius: 1%;
+    padding: 10px;
+}
+
+.todoItem {
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
 }
 
 .item {
-    width: 300px;
+    width: 150px;
 }
 
 .itemBig {
-    width: 600px;
+    width: 300px;
 }

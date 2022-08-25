@@ -1,10 +1,9 @@
 import TodoItem from "./TodoItem";
-import styles from '../../styles/Todo.module.scss';
 
 const TodoList = ({ todos }) => {
 
     return (
-        <div className={styles.todoBlock}>
+        <div>
             {todos.map(todo => (
                 <TodoItem key={todo.id} todo={todo} />
             ))}

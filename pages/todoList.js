@@ -3,6 +3,8 @@ import ShowText from "../helpers/ShowText";
 import styles from '../styles/Todo.module.scss';
 import Head from "next/head";
 import TodoList from "../components/TodoApp/TodoList";
+import TodoForm from "../components/TodoApp/TodoForm";
+import TodoFooter from '../components/TodoApp/TodoFooter';
 
 export async function getServerSideProps() {
     const data = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -58,7 +60,22 @@ function TodoMain({ users }) {
                     text='Now we will made our own ToDo app for burgers. Lets go !'
                     max={20}
                 />
-                <TodoList todos={todos} />
+                <div className={styles.todoBlock}>
+                    <TodoForm
+                        onAdd={text => {
+                            setTodos([
+                                ...todos,
+                                {
+                                    id: Math.random(),
+                                    text,
+                                    isCompleted: false
+                                }
+                            ]);
+                        }}
+                    />
+                    <TodoList todos={todos} />
+                    <TodoFooter />
+                </div>
             </div>
         </>
     )
