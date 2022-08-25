@@ -7,7 +7,7 @@ const ShowText = ({ text, max = 80 }) => {
     return (
         <>
             {text.length <= max ?
-                text :
+                <div>{text}</div> :
                 !more ?
                     <div>{text.slice(0, max)} <Link href='#'><a onClick={evt => {
                         evt.preventDefault();
