@@ -1,25 +1,15 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
+import UseBurgerData from "../helpers/UseBurgerData";
 
 
 const Quantity = () => {
 
     const [title, setTitle] = useState('');
-    const [data, setData] = useState('');
 
-    useEffect(() => {
-        if (title.length === 2) {
-            let id = setTimeout(() => {
-                fetch(`https://corona-api.com/countries/${title}`)
-                    .then(data => data.json())
-                    .then(results => setData(results.data))
-                    .catch(err => alert(err.message))
-            }, 1000);
-            return () => clearTimeout(id);
-        }
-    }, [title])
 
     let confirmed, country;
+    const data = UseBurgerData(title)
 
     if (data) {
         confirmed = data.latest_data.confirmed;
