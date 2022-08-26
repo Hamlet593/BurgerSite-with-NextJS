@@ -10,7 +10,7 @@ const TodoItem = ({ todo, onChange, onDelete }) => {
                 })
             }}/>
             <p className={styles.itemBig}>{todo.text}</p>
-            <button className={styles.item}>X</button>
+            <button className={styles.item} onClick={() => onDelete(todo)}>X</button>
         </div>
     )
 }

@@ -73,14 +73,22 @@ function TodoMain({ users }) {
                             ]);
                         }}
                     />
-                    <TodoList todos={todos} onChange={(newTodo) => {
-                        setTodos(todos.map(todo => {
-                            if(todo.id !== newTodo.id) {
-                                return todo
-                            } return newTodo;
-                        }))
-                    }}/>
-                    <TodoFooter todos={todos} />
+                    <TodoList
+                        todos={todos}
+                        onChange={(newTodo) => {
+                            setTodos(todos.map(todo => {
+                                if (todo.id !== newTodo.id) {
+                                    return todo
+                                } return newTodo;
+                            }))
+                        }}
+                        onDelete={(deletedTodo) => {
+                            setTodos(todos.filter(todo => todo.id !== deletedTodo.id))
+                        }}
+                    />
+                    <TodoFooter todos={todos} onClearCompleted={() => {
+                        setTodos(todos.filter(todo => !todo.isCompleted))
+                    }} />
                 </div>
             </div>
         </>
