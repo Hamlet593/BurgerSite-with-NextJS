@@ -7,7 +7,7 @@ const Quantity = () => {
 
     const [title, setTitle] = useState('');
     const data = UseBurgerData(title);
-    
+
     let confirmed, country;
 
     if (data) {
