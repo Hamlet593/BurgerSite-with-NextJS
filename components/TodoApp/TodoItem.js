@@ -8,7 +8,7 @@ const TodoItem = ({ todo, onChange, onDelete }) => {
                     ...todo,
                     isCompleted: evt.target.checked
                 })
-            }}/>
+            }} />
             <p className={styles.itemBig}>{todo.text}</p>
             <button className={styles.item} onClick={() => onDelete(todo)}>X</button>
         </div>

@@ -5,7 +5,7 @@ const TodoFooter = ({ todos, onClearCompleted }) => {
     return (
         <div>
             <span>{completedSize.length}/{todos.length} Completed</span>
-            <button style={{ marginLeft: "15px" }} onClick={onClearCompleted}>Clear Completed</button>
+            <button style={{ marginLeft: "15px" }} onClick={() => onClearCompleted()}>Clear Completed</button>
         </div>
     )
 }
