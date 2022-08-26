@@ -15,8 +15,8 @@ const UseBurgerData = (title) => {
             return () => clearTimeout(id);
         }
     }, [title])
-    
-  return data;
+
+    return data;
 }
 
 export default UseBurgerData;

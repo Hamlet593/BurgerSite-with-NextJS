@@ -6,10 +6,9 @@ import UseBurgerData from "../helpers/UseBurgerData";
 const Quantity = () => {
 
     const [title, setTitle] = useState('');
-
-
+    const data = UseBurgerData(title);
+    
     let confirmed, country;
-    const data = UseBurgerData(title)
 
     if (data) {
         confirmed = data.latest_data.confirmed;
