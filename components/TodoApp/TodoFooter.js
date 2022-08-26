@@ -1,8 +1,11 @@
-const TodoFooter = () => {
+const TodoFooter = ({ todos, onClearCompleted }) => {
+
+    const completedSize = todos.filter(todo => todo.isCompleted);
+
     return (
         <div>
-            <span>1/4 Completed</span>
-            <button style={{marginLeft: "15px"}}>Clear Completed</button>
+            <span>{completedSize.length}/{todos.length} Completed</span>
+            <button style={{ marginLeft: "15px" }} onClick={onClearCompleted}>Clear Completed</button>
         </div>
     )
 }

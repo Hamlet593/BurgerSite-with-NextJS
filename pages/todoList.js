@@ -73,8 +73,14 @@ function TodoMain({ users }) {
                             ]);
                         }}
                     />
-                    <TodoList todos={todos} />
-                    <TodoFooter />
+                    <TodoList todos={todos} onChange={(newTodo) => {
+                        setTodos(todos.map(todo => {
+                            if(todo.id !== newTodo.id) {
+                                return todo
+                            } return newTodo;
+                        }))
+                    }}/>
+                    <TodoFooter todos={todos} />
                 </div>
             </div>
         </>
