@@ -12,7 +12,9 @@ const UseBurgerData = (title) => {
                     .then(results => setData(results.data))
                     .catch(err => alert(err.message))
             }, 1000);
-            return () => clearTimeout(id);
+            return function () {
+                clearTimeout(id);
+            }
         }
     }, [title])
 
