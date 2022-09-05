@@ -14,6 +14,7 @@ const Header = () => {
                 <Link href='/burgers'><a>Burgers</a></Link>
                 <Link href='/todolist'><a>ToDo App</a></Link>
                 <Link href='/quantity'><a>Countries</a></Link>
+                <Link href='/registerform'><a>Register</a></Link>
             </nav>
         </header>
     )
